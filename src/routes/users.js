@@ -5,9 +5,8 @@ var Router = express.Router();
 
 
 module.exports = function() {
-  Router.get('/', function(req, res, next) {+
-    console.log("Users");
-    return res.json({users: [{name: 'sobin'}]});
+  Router.get('/', function(req, res, next) {
+    return res.status(200).json({users: [{name: 'sobin'}]});
   });
   return Router;
 }
